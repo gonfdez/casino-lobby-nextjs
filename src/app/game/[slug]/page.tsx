@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import ExpandableDescription from '@/components/ExpandableDescription';
 import { GamesData } from '@/types/game';
 import gamesData from '@/data/games.json';
 
@@ -66,9 +67,7 @@ export default async function GamePage({ params }: GamePageProps) {
             <div className="p-6 md:p-8">
               <div className="mb-8">
                 <h2 className="text-xl font-semibold mb-4 text-gray-900">Description</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  {cleanContent || 'No description available for this game.'}
-                </p>
+                <ExpandableDescription content={cleanContent} />
               </div>
 
               <div className="mb-8">
