@@ -105,7 +105,7 @@ export default async function GamePage({ params }: GamePageProps) {
                 href={game.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
               >
                 Play Now
               </Link>
