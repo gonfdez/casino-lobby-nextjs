@@ -17,7 +17,7 @@ export default function ExpandableDescription({ content }: ExpandableDescription
 
   if (!shouldTruncate) {
     return (
-      <p className="text-gray-700 leading-relaxed">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
         {content || 'No description available for this game.'}
       </p>
     );
@@ -25,12 +25,12 @@ export default function ExpandableDescription({ content }: ExpandableDescription
 
   return (
     <div>
-      <p className="text-gray-700 leading-relaxed mb-3">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
         {displayContent}
       </p>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200 flex items-center gap-1"
+        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors duration-200 flex items-center gap-1"
       >
         {isExpanded ? (
           <>

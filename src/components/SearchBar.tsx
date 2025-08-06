@@ -12,11 +12,11 @@ export default function SearchBar({ searchTerm, onSearchChange }: SearchBarProps
           placeholder="Search games"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full px-4 py-3 pl-10 text-gray-900 bg-white shadow-sm rounded-lg focus:outline-none focus:border-gray-700"
+          className="w-full px-4 py-3 pl-10 text-gray-900 dark:text-white bg-white dark:bg-gray-800 shadow-sm rounded-lg focus:outline-none focus:border-gray-700 dark:focus:border-gray-400 transition-colors duration-200 border border-gray-200 dark:border-gray-700"
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <svg
-            className="w-5 h-5 text-gray-500"
+            className="w-5 h-5 text-gray-500 dark:text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

@@ -13,7 +13,7 @@ export default function GameCard({ game }: GameCardProps) {
 
   return (
     <Link href={`/game/${game.slug}`}>
-      <div className="group cursor-pointer bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      <div className="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg overflow-hidden hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
         <div className="relative aspect-square">
           <Image
             src={thumbnailUrl}
@@ -24,8 +24,8 @@ export default function GameCard({ game }: GameCardProps) {
           />
         </div>
         <div className="p-4">
-          <h3 className="font-semibold text-gray-900 truncate">{game.title}</h3>
-          <p className="text-sm text-gray-600 mt-1">{game.game_provider.name}</p>
+          <h3 className="font-semibold text-gray-900 dark:text-white truncate">{game.title}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{game.game_provider.name}</p>
         </div>
       </div>
     </Link>

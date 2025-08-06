@@ -41,7 +41,7 @@ export default async function GamePage({ params }: GamePageProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/50 dark:bg-black/70"></div>
       </div>
 
       <div className="relative z-10 min-h-screen">
@@ -50,7 +50,7 @@ export default async function GamePage({ params }: GamePageProps) {
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link
             href="/"
-            className="inline-flex items-center text-white hover:text-gray-200 mb-6 transition-colors backdrop-blur-sm bg-black/20 px-3 py-2 rounded-lg"
+            className="inline-flex items-center text-white hover:text-gray-200 dark:hover:text-gray-300 mb-6 transition-colors backdrop-blur-sm bg-black/20 dark:bg-black/30 px-3 py-2 rounded-lg"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -58,42 +58,42 @@ export default async function GamePage({ params }: GamePageProps) {
             Back to lobby
           </Link>
 
-          <div className="text-center py-8 px-6 backdrop-blur-md bg-black/20 text-white rounded-lg mb-6">
+          <div className="text-center py-8 px-6 backdrop-blur-md bg-black/20 dark:bg-black/30 text-white rounded-lg mb-6">
             <h1 className="text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">{game.title}</h1>
             <p className="text-lg opacity-90 drop-shadow-md">by {game.game_provider.name}</p>
           </div>
 
-          <div className="bg-white/95 backdrop-blur-md rounded-lg shadow-xl overflow-hidden">
+          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-lg shadow-xl overflow-hidden transition-colors duration-200">
             <div className="p-6 md:p-8">
               <div className="mb-8">
-                <h2 className="text-xl font-semibold mb-4 text-gray-900">Description</h2>
+                <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Description</h2>
                 <ExpandableDescription content={cleanContent} />
               </div>
 
               <div className="mb-8">
-                <h2 className="text-xl font-semibold mb-4 text-gray-900">Game Information</h2>
+                <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Game Information</h2>
                 <div className="space-y-3">
                   <div>
-                    <span className="font-medium text-gray-700">Provider:</span>
+                    <span className="font-medium text-gray-700 dark:text-gray-300">Provider:</span>
                     <Link
                       href={game.game_provider.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-2 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                      className="ml-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
                     >
                       {game.game_provider.name}
                     </Link>
                   </div>
                   <div>
-                    <span className="font-medium text-gray-700">Devices:</span>
-                    <span className="ml-2 text-gray-600 capitalize">
+                    <span className="font-medium text-gray-700 dark:text-gray-300">Devices:</span>
+                    <span className="ml-2 text-gray-600 dark:text-gray-400 capitalize">
                       {game.device_type.join(', ')}
                     </span>
                   </div>
                   {game.game_width && game.game_height && (
                     <div>
-                      <span className="font-medium text-gray-700">Resolution:</span>
-                      <span className="ml-2 text-gray-600">
+                      <span className="font-medium text-gray-700 dark:text-gray-300">Resolution:</span>
+                      <span className="ml-2 text-gray-600 dark:text-gray-400">
                         {game.game_width} x {game.game_height}
                       </span>
                     </div>
@@ -105,7 +105,7 @@ export default async function GamePage({ params }: GamePageProps) {
                 href={game.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 text-white font-semibold py-4 rounded-lg transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
               >
                 Play Now
               </Link>

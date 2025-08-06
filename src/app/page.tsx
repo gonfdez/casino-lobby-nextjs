@@ -23,7 +23,7 @@ export default function HomePage() {
   }, [games, searchTerm]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Header />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -31,12 +31,12 @@ export default function HomePage() {
         
         {filteredGames.length === 0 ? (
           <div className="text-center py-12">
-            <div className="text-gray-500 text-lg">
+            <div className="text-gray-500 dark:text-gray-400 text-lg">
               No games found matching "{searchTerm}"
             </div>
             <button
               onClick={() => setSearchTerm('')}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded transition-colors duration-200"
             >
               Clear search
             </button>
