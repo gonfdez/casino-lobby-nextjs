@@ -21,7 +21,7 @@ All requirements from the technical challenge have been successfully implemented
 ```bash
 # Clone the repository
 git clone https://github.com/gonfdez/casino-lobby-nextjs
-cd casino-lobby
+cd casino-lobby-nextjs
 
 # Install dependencies
 npm install
