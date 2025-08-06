@@ -11,6 +11,8 @@ export default function GameCard({ game }: GameCardProps) {
     ? `https:${game.game_thumbnail}`
     : game.game_thumbnail;
 
+  const isAnimatedGif = thumbnailUrl.toLowerCase().endsWith('.gif');
+
   return (
     <Link href={`/game/${game.slug}`}>
       <div className="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg overflow-hidden hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
@@ -21,6 +23,7 @@ export default function GameCard({ game }: GameCardProps) {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+            unoptimized={isAnimatedGif}
           />
         </div>
         <div className="p-4">
