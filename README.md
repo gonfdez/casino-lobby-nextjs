@@ -6,7 +6,7 @@ A modern casino lobby application built with **Next.js 15** and **TailwindCSS** 
 
 All requirements from the technical challenge have been successfully implemented:
 
-- ✅ **Next.js with TypeScript** - Modern React framework with full type safety
+- ✅ **Next.js with TypeScript and TailwindCSS** - Modern React framework with full type safety
 - ✅ **Casino Lobby Interface** - Clean, responsive game grid layout
 - ✅ **Game Information Pages** - Dynamic routing with game backgrounds, detailed content, and custom 404 page for non-existent games
 - ✅ **Search Functionality** - Real-time filtering by game title with error messages when no games match the search term
